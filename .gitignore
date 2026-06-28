@@ -1,0 +1,10 @@
+# Skill eval run artifacts
+*-workspace/
+iteration-*/
+feedback.json
+benchmark.json
+benchmark.md
+
+# OS / editor noise
+.DS_Store
+*.swp
