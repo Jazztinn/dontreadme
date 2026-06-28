@@ -1,0 +1,29 @@
+{
+  "skill_name": "hackathon-readme",
+  "evals": [
+    {
+      "id": 0,
+      "name": "repo-scan-with-weighted-criteria",
+      "prompt": "We just finished our hackathon project, it's in this folder. Can you write us a proper README for the judges? The judging criteria they gave us are: Innovation (30%), Technical Execution (30%), Impact (25%), and Presentation/Polish (15%). Demo is live at https://loststudy.vercel.app and our 2-min video is https://youtu.be/demo123. Team is Jazz (frontend) and Mina (ML).",
+      "expected_output": "A rich submission-style README.md grounded in the actual repo (Next.js, Supabase, OpenAI, npm run dev, env vars from .env.example). Centered tech badge row, demo+video as badge-buttons near the top, team table, How-it-works citing real files, tech-stack table, project tree. A Judging Highlights section maps the project to all four weighted criteria, with emphasis ordered to the weights. Honest, skimmable, no invented features.",
+      "files": ["fixtures/sponsorhack-frontend"],
+      "assertions": []
+    },
+    {
+      "id": 1,
+      "name": "repo-only-no-criteria-default-rubric",
+      "prompt": "make a readme for this so it looks good when we submit it for judging. we ran out of time lol. no readme yet. it's a python api.",
+      "expected_output": "Given no criteria provided, fall back to the default rubric (innovation, technical execution, impact, polish) and still produce a Judging Highlights section. README grounded in the FastAPI repo (uvicorn run command from Makefile, requirements.txt deps, /triage endpoint), with a tech badge row and tech-stack table. Should leave clearly-marked placeholders for demo link, video, and team since those weren't provided rather than inventing them.",
+      "files": ["fixtures/medtriage-api"],
+      "assertions": []
+    },
+    {
+      "id": 2,
+      "name": "messy-notes-no-repo",
+      "prompt": "I don't have the code handy but here are my notes from our hackathon, can you turn this into a README? \n\nproject: PantryPal. idea came from my roommate throwing out expired food every week. you snap a photo of your fridge, we detect the items and expiry, and suggest recipes before stuff goes bad. built with React Native + a Roboflow vision model + the Spoonacular recipe API. hardest part was getting the on-device detection fast enough. won't have a deploy link but we have a video: https://devpost.com/pantrypal. team of 3. judging is just 'creativity, usefulness, and technical wow'.",
+      "expected_output": "A README built from the notes (no repo to scan). Lean product-hack flavor: should NOT pad with SDG/ethics/citations sections. Mapped to the stated criteria (creativity, usefulness, technical-wow) via a Judging Highlights section, with the on-device-speed challenge highlighted for technical-wow. Should NOT fabricate setup commands since there's no repo — instead leave a clearly-marked setup placeholder. Video badge-button near top. Tech badge row for React Native / Roboflow / Spoonacular is fine since those were named.",
+      "files": [],
+      "assertions": []
+    }
+  ]
+}
