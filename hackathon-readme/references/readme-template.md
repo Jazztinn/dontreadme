@@ -27,6 +27,16 @@ the output.
   <!-- ...one per major technology... -->
 </p>
 
+<!-- Optional nav bar: anchor links to the sections a judge will jump to. On a
+     phone this turns a long scroll into one tap. Use 3–6 of the most important
+     sections; the anchor is the header text lowercased with spaces as hyphens. -->
+<p align="center">
+  <a href="#the-problem">Problem</a> •
+  <a href="#what-it-does">What it does</a> •
+  <a href="#run-locally">Run it</a> •
+  <a href="#judging-highlights">Judging Highlights</a>
+</p>
+
 ---
 
 <!-- Event + submission context, so a judge knows what they're looking at. -->
@@ -146,6 +156,54 @@ bare one — but on a lean product hack they're noise, so don't force them.
 | <name> | <val> | <plain-language meaning> |
 
 <!-- A note on sample size / caveats reads as honest and rigorous. -->
+<!-- For benchmark claims, link the raw data / reproduction script — "real
+     numbers from <source>, reproduce with `<cmd>`" is far more persuasive than
+     a bare table, and judges trust a claim they can re-run. -->
+```
+
+**Before / after** (anything that improves on a status quo — faster, cheaper,
+fewer steps). A 50/50 table makes the win instant and visual; judges *see* it
+instead of reading a claim.
+```markdown
+<table>
+<tr>
+<td width="50%">
+
+### Before
+<!-- the painful old way: screenshot, code, or quote -->
+
+</td>
+<td width="50%">
+
+### After
+<!-- the same thing with your project -->
+
+</td>
+</tr>
+</table>
+```
+
+**Headline stat box** — a single big number stated visually, right under the
+hero, for projects with one killer metric. ASCII bars render in any markdown and
+read as confident.
+```markdown
+\```
+┌─────────────────────────────────────┐
+│  <METRIC>        ████████ <value>   │
+│  <METRIC>        ████████ <value>   │
+└─────────────────────────────────────┘
+\```
+```
+
+**GitHub alert callouts** — use sparingly to spotlight one caveat or one key
+fact so a skimming judge cannot miss it. Renders as a colored box on GitHub.
+```markdown
+> [!IMPORTANT]
+> <The one thing a judge must understand — a scope boundary, a known
+> limitation stated honestly, or what makes this hard.>
+
+> [!NOTE]
+> <Helpful context, e.g. "demo runs fully offline — no API key needed.">
 ```
 
 **Mermaid pipeline diagram** (multi-stage systems)
