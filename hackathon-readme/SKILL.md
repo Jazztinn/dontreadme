@@ -143,7 +143,15 @@ file; here's the shape and which parts are core vs. optional.
 14. License
 
 **Optional (include based on event flavor and what's real):**
-- Headline results / metrics table + error/analysis tables (data projects)
+- A nav bar of anchor links under the hero (3–6 key sections) — turns a long
+  scroll into one tap for a judge skimming on a phone.
+- Headline results / metrics table + error/analysis tables (data projects); link
+  the raw data or a reproduction command so the numbers are re-runnable.
+- A **before/after** 50/50 table when the project improves on a status quo
+  (faster, cheaper, fewer steps) — it makes the win visual instead of claimed.
+- An ASCII **stat box** under the hero for a project with one killer number.
+- `> [!IMPORTANT]` / `> [!NOTE]` GitHub alert callouts to spotlight the one
+  caveat or key fact a skimming judge must not miss (use sparingly).
 - Mermaid pipeline diagram (multi-stage systems)
 - Demo flow / "what works offline" style walkthrough
 - AI-use disclosure (academic events)
@@ -162,7 +170,11 @@ Style notes that matter for judging:
   whichever is the hook.
 - **Show, don't tell** — a demo badge-button, a GIF, a one-command setup, and an
   expected-output block beat adjectives. Every impressive claim should be
-  verifiable.
+  verifiable. A before/after table, a stat box, or a reproducible benchmark turns
+  a claim into proof the judge can see or re-run.
+- **Make the hero do work** — centered title, optional logo/mascot, badge row,
+  and one sharp tagline should let a judge grasp what this is and why it's good
+  before scrolling. Put the demo/video buttons here, where the first click lands.
 - **Ground everything in the repo** — real file paths, real commands, the real
   dev port. This is what makes the README trustworthy and is the through-line of
   the example style.
